@@ -26,3 +26,42 @@ Identificar las funciones principales que deberá realizar el sistema para satis
 | **RF-19** | El sistema deberá enviar la información de la compra al servicio de facturación para generar el comprobante de pago. |
 | **RF-20** | El sistema deberá consultar al ERP la información de productos, precios y stock. |
 | **RF-21** | El sistema deberá actualizar la disponibilidad de los productos utilizando la información proporcionada por el ERP. |
+| **RF-22** | El sistema deberá permitir al Administrador consultar y supervisar las actividades realizadas dentro de la plataforma. |
+
+---
+
+# Relación entre Historias de Usuario y Requisitos Funcionales
+
+## Objetivo
+Relacionar las historias de usuario con los requisitos funcionales que permiten satisfacer las necesidades identificadas para cada actor del sistema.
+
+| Historia de Usuario | Descripción resumida | Requisitos Funcionales relacionados |
+|---|---|---|
+| **HU-01** | Buscar productos. | RF-01 |
+| **HU-02** | Consultar información de un producto. | RF-02 |
+| **HU-03** | Agregar productos al carrito. | RF-03, RF-04 |
+| **HU-04** | Realizar un pedido. | RF-05 |
+| **HU-05** | Efectuar el pago del pedido. | RF-06, RF-07, RF-16, RF-19 |
+| **HU-06** | Consultar pedidos y conocer su estado. | RF-08, RF-17, RF-18 |
+| **HU-07** | Registrar productos. | RF-09 |
+| **HU-08** | Actualizar información de productos. | RF-10, RF-20, RF-21 |
+| **HU-09** | Consultar productos publicados. | RF-11 |
+| **HU-10** | Consultar ventas realizadas. | RF-12 |
+| **HU-11** | Gestionar información relacionada con las ventas. | RF-12, RF-17 |
+| **HU-12** | Gestionar usuarios de la plataforma. | RF-13 |
+| **HU-13** | Supervisar productos publicados. | RF-14 |
+| **HU-14** | Administrar información general de la plataforma. | RF-15 |
+| **HU-15** | Supervisar las actividades realizadas en la plataforma. | RF-22 |
+
+---
+
+## Requisitos de integración
+
+Los siguientes requisitos funcionales permiten que el marketplace se comunique con sistemas y servicios externos.
+
+| Sistema externo | Requisitos relacionados | Función |
+|---|---|---|
+| **Pasarela de pago** | RF-06, RF-07, RF-16 | Procesar el pago y comunicar el resultado de la transacción. |
+| **Servicio de envío** | RF-17, RF-18 | Gestionar la entrega y proporcionar el estado del envío. |
+| **Servicio de facturación** | RF-19 | Generar el comprobante correspondiente a la compra. |
+| **ERP** | RF-20, RF-21 | Proporcionar información de productos, precios, disponibilidad y stock. |
